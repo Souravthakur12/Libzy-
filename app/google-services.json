@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "213585223248",
+    "firebase_url": "https://libzy-b50d2.firebaseio.com",
+    "project_id": "libzy-b50d2",
+    "storage_bucket": "libzy-b50d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213585223248:android:204c40f1a10035af09fb55",
+        "android_client_info": {
+          "package_name": "abvgiet.library.libzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213585223248-qd5a8qmlct72sdl8vrlfnl6tbiang93t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoQfkSBQdzr4LFsIZPFQajY0j6mL6cXiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213585223248-qd5a8qmlct72sdl8vrlfnl6tbiang93t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

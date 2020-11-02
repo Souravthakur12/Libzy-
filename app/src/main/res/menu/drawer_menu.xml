@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+<group android:checkableBehavior="single">
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_account_circle_black_18dp" />
+    <item android:id="@+id/about_us"
+        android:title="Your Issued Book"
+        android:icon="@drawable/baseline_view_list_black_18dp"/>
+    <item android:id="@+id/description"
+        android:title="About Us"
+        android:icon="@drawable/baseline_info_black_18dp"/>
+    <item android:id="@+id/suggest_us"
+        android:title="Suggest Us"
+        android:icon="@drawable/baseline_feedback_black_18dp"/>
+    <item android:id="@+id/log_out"
+        android:title="Log Out"
+        android:icon="@drawable/baseline_log_out_app_black_18dp"/>
+</group>
+
+</menu>

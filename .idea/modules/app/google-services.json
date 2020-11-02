@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "750546254640",
+    "firebase_url": "https://libzy-2512f.firebaseio.com",
+    "project_id": "libzy-2512f",
+    "storage_bucket": "libzy-2512f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750546254640:android:8ca2a8705ccaa6cde826f5",
+        "android_client_info": {
+          "package_name": "abvgiet.library.libzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750546254640-bs26jvbofaa4si7m4t9io37no5pei93g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "abvgiet.library.libzy",
+            "certificate_hash": "72d85f1b701e42927914ce03c8a27415ed90a695"
+          }
+        },
+        {
+          "client_id": "750546254640-n7qe2u4kpnjr5bcmosjvr40krhho9k1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOjuIpnl1Kvg2Xa_4yz7pAiRzF0ZkWmT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750546254640-n7qe2u4kpnjr5bcmosjvr40krhho9k1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
