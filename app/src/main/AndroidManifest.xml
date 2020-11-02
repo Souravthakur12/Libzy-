@@ -36,6 +36,14 @@
             android:name=".splashscreen"
             android:screenOrientation="portrait">
 
+        </activity>
+
+
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,12 +51,9 @@
             </intent-filter>
 
 
+
+
         </activity>
-
-
-        <activity
-            android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
     </application>
 
 </manifest>

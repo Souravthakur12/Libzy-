@@ -337,10 +337,13 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
       switch (menuItem.getItemId()){
-          case R.id.profile :
-              Intent intent = new Intent(this,Cse_Sem4.class);
-              startActivity(intent);
-                break;
+          case R.id.log_out :
+              FirebaseAuth.getInstance().signOut();
+              Intent intToMain = new Intent(UserActivity.this, LoginActivity.class);
+              startActivity(intToMain);
+              finish();
+              break;
+
 
       }
         drawerLayout.closeDrawer(GravityCompat.START);
