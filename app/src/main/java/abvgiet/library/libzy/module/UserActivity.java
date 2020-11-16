@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -17,10 +19,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.bumptech.glide.Glide;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,6 +56,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
     ViewPager viewPager;
     Button btnLogout;
+    FirebaseUser currentUser;
 
 
     private DrawerLayout drawerLayout;
@@ -66,7 +71,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.navigation_drawer);
         navigationView.setNavigationItemSelectedListener(this);
-
+       // updateNavHeader();
 
         drawerLayout = findViewById(R.id.drawer_user);
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
@@ -76,10 +81,10 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         slider = findViewById(R.id.Slider);
 
         List<SlideModel>sliderModels = new ArrayList<>();
-        sliderModels.add(new SlideModel("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"));
-        sliderModels.add(new SlideModel("https://tulane.edu/sites/tulane/files/library0329.jpg"));
-        sliderModels.add(new SlideModel("https://www.magd.cam.ac.uk/sites/default/files/styles/1302x600/public/2017-09/magdalene_college_library.jpg?itok=1v6BgUME"));
-        sliderModels.add(new SlideModel("https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_library_bacteria.png"));
+        sliderModels.add(new SlideModel("https://firebasestorage.googleapis.com/v0/b/libzy-b50d2.appspot.com/o/library.jpeg?alt=media&token=a3077eb9-4157-45e2-95e6-9ed168e9055f"));
+        sliderModels.add(new SlideModel("https://firebasestorage.googleapis.com/v0/b/libzy-b50d2.appspot.com/o/WhatsApp%20Image%202020-10-20%20at%2016.26.38.jpeg?alt=media&token=424def13-f91f-4a94-9b9b-31f89136406e"));
+        sliderModels.add(new SlideModel("https://firebasestorage.googleapis.com/v0/b/libzy-b50d2.appspot.com/o/college_view.jpeg?alt=media&token=a8e9eabe-c94f-4ccd-b56e-522ea291f467"));
+        sliderModels.add(new SlideModel("https://firebasestorage.googleapis.com/v0/b/libzy-b50d2.appspot.com/o/college_admin_block.jpg?alt=media&token=3f8272e9-ef56-4fce-b925-4d01566dc995"));
         slider.setImageList(sliderModels,true);
 
 
@@ -351,8 +356,41 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
 
+    /*public void updateNavHeader() {
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_drawer);
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = headerView.findViewById(R.id.nav_header_user_name);
+        TextView navUserMail = headerView.findViewById(R.id.nav_header_user_email);
+        ImageView navUserPhot = headerView.findViewById(R.id.nav_header_user_profile);
+
+//        navUserMail.setText(currentUser.getEmail());
+      //  navUsername.setText(currentUser.getDisplayName());
+
+        // now we will use Glide to load user image
+        // first we need to import the library
+        if (currentUser.getPhotoUrl() !=null){
+            Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhot);
+        }
+        else
+        {
+            Glide.with(this).load(R.drawable.userphoto).into(navUserPhot);
+        }
+
+
+
+
+
+
+    }*/
+
+
+    /*FinishAffinity removes the connection of the existing activity to its stack.
+     And then finish helps you exit that activity. Which will eventually exit the application.*/
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        finish();
     }
 }

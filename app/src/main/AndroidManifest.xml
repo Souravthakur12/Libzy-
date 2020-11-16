@@ -15,7 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustResize|stateHidden">
-        <activity android:name=".books.Cse_Sem8"></activity>
+        <activity android:name=".OrderSuccessMusic">
+
+
+        </activity>
+        <activity android:name=".books.Cse_Sem8" />
         <activity android:name=".books.Cse_Sem7" />
         <activity android:name=".books.Cse_Sem6" />
         <activity android:name=".books.Cse_Sem5" />
@@ -28,30 +32,21 @@
         <activity android:name=".books.Cse_Sem2" />
         <activity android:name=".books.Ece_Sem1" />
         <activity android:name=".books.Cse_Sem1" />
-        <activity android:name=".module.UserActivity">
-
-        </activity>
+        <activity android:name=".Edit_User_Details"/>
+        <activity android:name=".module.UserActivity"></activity>
         <activity android:name=".module.AdminActivity" />
         <activity
             android:name=".splashscreen"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden"
-            >
+            android:windowSoftInputMode="adjustResize|stateHidden">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
 
         </activity>
     </application>

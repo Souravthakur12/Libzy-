@@ -22,6 +22,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 import abvgiet.library.libzy.module.AdminActivity;
 import abvgiet.library.libzy.module.UserActivity;
@@ -86,7 +90,23 @@ public class LoginActivity extends AppCompatActivity {
                                          startActivity(intToAdmin);
 
                                     }else {
-                                        Intent intToAdmin = new Intent(LoginActivity.this, UserActivity.class);
+                                        FirebaseUser user = mAuth.getCurrentUser();
+
+                                        String email = user.getEmail();
+                                        String uid = user.getUid();
+
+                                        HashMap<Object,String>hashMap = new HashMap<>();
+                                        hashMap.put("email",email);
+                                        hashMap.put("name","");
+                                        hashMap.put("phone","");
+                                        hashMap.put("rollno","");
+                                        hashMap.put("stream","");
+
+                                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+                                        DatabaseReference reference = database.getReference("Users");
+                                        reference.child(uid).setValue(hashMap);
+                                        Intent intToAdmin = new Intent(LoginActivity.this, Edit_User_Details.class);
                                         startActivity(intToAdmin);
                                         finish();
 
