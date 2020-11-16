@@ -56,6 +56,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
     ViewPager viewPager;
     Button btnLogout;
+    FirebaseAuth mAuth;
     FirebaseUser currentUser;
 
 
@@ -69,9 +70,14 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_user);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
+
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
         NavigationView navigationView = findViewById(R.id.navigation_drawer);
         navigationView.setNavigationItemSelectedListener(this);
-       // updateNavHeader();
+       updateNavHeader();
 
         drawerLayout = findViewById(R.id.drawer_user);
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
@@ -357,25 +363,27 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    /*public void updateNavHeader() {
+    public void updateNavHeader() {
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_drawer);
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = headerView.findViewById(R.id.nav_header_user_name);
         TextView navUserMail = headerView.findViewById(R.id.nav_header_user_email);
-        ImageView navUserPhot = headerView.findViewById(R.id.nav_header_user_profile);
+        ImageView navUserPhoto = headerView.findViewById(R.id.nav_header_user_profile);
 
-//        navUserMail.setText(currentUser.getEmail());
-      //  navUsername.setText(currentUser.getDisplayName());
+        navUserMail.setText(currentUser.getEmail());
+        navUsername.setText(currentUser.getDisplayName());
 
         // now we will use Glide to load user image
         // first we need to import the library
+
+
         if (currentUser.getPhotoUrl() !=null){
-            Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhot);
+            Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
         }
         else
         {
-            Glide.with(this).load(R.drawable.userphoto).into(navUserPhot);
+            Glide.with(this).load(R.drawable.userphoto).into(navUserPhoto);
         }
 
 
@@ -383,7 +391,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-    }*/
+    }
 
 
     /*FinishAffinity removes the connection of the existing activity to its stack.
