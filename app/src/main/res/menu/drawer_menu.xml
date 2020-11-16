@@ -12,9 +12,11 @@
     <item android:id="@+id/description"
         android:title="About Us"
         android:icon="@drawable/baseline_info_black_18dp"/>
+
     <item android:id="@+id/suggest_us"
         android:title="Suggest Us"
         android:icon="@drawable/baseline_feedback_black_18dp"/>
+
     <item android:id="@+id/log_out"
         android:title="Log Out"
         android:icon="@drawable/baseline_log_out_app_black_18dp"/>

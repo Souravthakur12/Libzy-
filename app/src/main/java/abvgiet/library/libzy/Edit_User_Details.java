@@ -115,7 +115,7 @@ public class Edit_User_Details extends AppCompatActivity {
 
 
 
-                   Intent i = new Intent(Edit_User_Details.this, UserActivity.class);
+                    Intent i = new Intent(Edit_User_Details.this, UserActivity.class);
                     startActivity(i);
 
 
@@ -221,31 +221,31 @@ public class Edit_User_Details extends AppCompatActivity {
 
 
 
-                        // uri contain user image url
+        // uri contain user image url
 
 
-                        UserProfileChangeRequest profleUpdate = new UserProfileChangeRequest.Builder()
-                                .setDisplayName(userName)
-                                .build();
+        UserProfileChangeRequest profleUpdate = new UserProfileChangeRequest.Builder()
+                .setDisplayName(userName)
+                .build();
 
 
-                        currentUser.updateProfile(profleUpdate)
-                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
+        currentUser.updateProfile(profleUpdate)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
 
-                                        if (task.isSuccessful()) {
-                                            // user info updated successfully
+                        if (task.isSuccessful()) {
+                            // user info updated successfully
 
 
-                                            showMessage("Register Complete");
+                            showMessage("Register Complete");
 
-                                        }
-
-                                    }
-                                });
+                        }
 
                     }
+                });
+
+    }
 
 
 
@@ -259,14 +259,14 @@ public class Edit_User_Details extends AppCompatActivity {
         String stream = userStream.getText().toString();
         String phone = userPhone.getText().toString();
         String roll = userRoll_No.getText().toString();
-      //  String imguser = pickedImgUri.toString();
+        //  String imguser = pickedImgUri.toString();
 
         HashMap<String,Object> result = new HashMap<>();
         result.put("name",name);
         result.put("stream",stream);
         result.put("phone",phone);
         result.put("roll_no",roll);
-      //  result.put("image",imguser);
+        //  result.put("image",imguser);
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -354,6 +354,5 @@ public class Edit_User_Details extends AppCompatActivity {
 
 
 
-    }
-
+}
 
