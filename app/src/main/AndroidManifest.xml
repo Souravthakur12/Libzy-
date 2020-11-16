@@ -17,7 +17,6 @@
         android:windowSoftInputMode="adjustResize|stateHidden">
         <activity android:name=".OrderSuccessMusic">
 
-
         </activity>
         <activity android:name=".books.Cse_Sem8" />
         <activity android:name=".books.Cse_Sem7" />
@@ -37,16 +36,19 @@
         <activity android:name=".module.AdminActivity" />
         <activity
             android:name=".splashscreen"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden">
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+
 
         </activity>
     </application>

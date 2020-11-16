@@ -30,7 +30,7 @@ public class User_Order_Sucess extends AppCompatActivity {
 
             @Override
             public void run() {
-                Intent i = new Intent(User_Order_Sucess.this, UserActivity.class);
+                Intent i = new Intent(User_Order_Sucess.this, OrderSuccessMusic.class);
                 startActivity(i);
                 finish();
             }
